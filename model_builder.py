@@ -88,7 +88,7 @@ class ResNet(nn.Module):
         self.layer5=self._make_layer(block,block_num[3],512,2)
 
         self.avg=nn.AvgPool2d((1,1))
-        self.fc=nn.Linear(76*76*2,num_classes)
+        self.fc=nn.Linear(128*128*2,num_classes)
 
 
     def forward(self,x):

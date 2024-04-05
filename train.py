@@ -15,7 +15,7 @@ if __name__=='__main__':
     # Porcent wykorzystania całych danych
     DATA_PROCENT=1
     NUM_EPOCHS = 20
-    BATCH_SIZE = 80
+    BATCH_SIZE = 64
     LEARNING_RATE = 0.01
     BLOCK_NUM=[3,4,6,3]
     device = "cuda" if torch.cuda.is_available() else "cpu"
@@ -27,7 +27,7 @@ if __name__=='__main__':
                     #transforms.TrivialAugmentWide(num_magnitude_bins=31),
                     transforms.ToTensor()
                     ])
-    
+
     train_dataloader, test_dataloader, class_names = data_setup.create_dataloaders(
         DatasetDir=data_dir,
         transform=data_transform,

@@ -18,7 +18,7 @@ def merge(l, start, end):
         sub_merged = sub_merged+o
     merged = l[:start] + [sub_merged] + l[end+1:]
     return merged
-
+h_l, w_l = [], []
 for author_no in range(num_of_authors):
     file_desc_name = "author" + str(author_no + 1) + "/word_places.txt"
     file_desc_ptr = open(file_desc_name, 'r')
@@ -66,11 +66,22 @@ for author_no in range(num_of_authors):
 
             subimage = image[min(row1,row2):max(row1,row2),
                             min(column1,column2):max(column1,column2)] 
-
-            subimage = resize(subimage, (128,128))
+            h_l.append(len(subimage))
+            w_l.append(len(subimage[0]))
+            
+            subimage = resize(subimage, (65,154))
             mpimg.imsave(subimage_dir+'\\'+str(num_of_words)+'.bmp',subimage)
 
         # if num_of_words >= max_num_of_words_per_author: break
 
 
     file_desc_ptr.close()
+s=0
+for h in h_l:
+    s+=h
+print(s/len(h_l))
+
+s=0
+for w in w_l:
+    s+=w
+print(s/len(w_l))

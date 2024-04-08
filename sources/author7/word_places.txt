@@ -168,7 +168,7 @@
 "skany\panTadeusz1.bmp" podmurowany 1892 920 2000 1173
 "skany\panTadeusz1.bmp" Œwieci³y 1960 46 2067 187
 "skany\panTadeusz1.bmp" siê 1976 221 2030 275
-"skany\panTadeusz1.bmp" zdaleka 1972 277 2020 447
+"skany\panTadeusz1.bmp" z daleka 1972 277 2020 447
 "skany\panTadeusz1.bmp" pobielane 1955 493 2026 652
 "skany\panTadeusz1.bmp" œciay 1957 690 2034 811
 "skany\panTadeusz1.bmp" Tym 2022 33 2123 130
